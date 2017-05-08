@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.params=xLoc\ yLoc
+comment0.target=Square(int,\ int)
+comment1.params=px\ py
+comment1.target=void\ move(int,\ int)
+comment2.params=page
+comment2.target=void\ draw(java.awt.Graphics)
+comment3.params=px\ py
+comment3.target=void\ run(int,\ int)
+comment4.params=
+comment4.target=int\ getx()
+comment5.params=
+comment5.target=int\ gety()
+numComments=6

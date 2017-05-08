@@ -1,0 +1,20 @@
+#BlueJ class context
+comment0.params=pxLoc\ pyLoc
+comment0.target=Player(int,\ int)
+comment1.params=
+comment1.target=void\ move()
+comment2.params=press
+comment2.target=void\ setLeft(boolean)
+comment3.params=press
+comment3.target=void\ setRight(boolean)
+comment4.params=press
+comment4.target=void\ setUp(boolean)
+comment5.params=press
+comment5.target=void\ setDown(boolean)
+comment6.params=
+comment6.target=int\ getx()
+comment7.params=
+comment7.target=int\ gety()
+comment8.params=page
+comment8.target=void\ draw(java.awt.Graphics)
+numComments=9

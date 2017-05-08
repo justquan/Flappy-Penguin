@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.params=
+comment0.target=Block()
+comment1.params=
+comment1.target=void\ changePlace()
+comment2.params=page
+comment2.target=void\ draw(java.awt.Graphics)
+comment3.params=
+comment3.target=int\ getx()
+comment4.params=
+comment4.target=int\ gety()
+numComments=5
