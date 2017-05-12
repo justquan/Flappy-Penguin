@@ -11,4 +11,6 @@ comment4.params=event
 comment4.target=void\ keyPressed(java.awt.event.KeyEvent)
 comment5.params=event
 comment5.target=void\ keyTyped(java.awt.event.KeyEvent)
-numComments=6
+comment6.params=
+comment6.target=void\ removePipe()
+numComments=7

@@ -3,63 +3,59 @@ import java.awt.*;//must be imported to use Graphics
 public class Player
 {
     private int px;
-    private int py;
-    private int diam = 100;
+    private double py;
+    private int diam = 75;
     private boolean left = false;
     private boolean right = false;
     private boolean up = false;    
-    private boolean down = false;    
+    private boolean down = false;
+    public static final double g = .2;
+    private double velocity;
+    
     public Player( int pxLoc, int pyLoc )
     {
         px = pxLoc;
         py = pyLoc;
+        velocity = 0.0;
     }
 
     public void move(){
-        if (left == true && px>0){
-                px = px - 5;
-            }
-            
-        if (right == true && px <= 1000 - diam){
-                px = px + 5;
-            }
-            
-        if (up == true && py >= 0){
-                py = py - 5;
-            }
-        
-        if (down == true && py <= 800 - diam){
-                py = py + 5;
-            }
+
+        if(!up && py < 700) {
+            fall();
         }
-        
-    public void setLeft(boolean press){//s
-        left = press;
+
+        if (up == true && py >= 0){
+            py = py - 10;
+            velocity = 0;
+        }
+
     }
     
-        public void setRight(boolean press){//s
-        right = press;
+    public void fall(){
+        velocity += g;
+        py += velocity;
     }
-    
+
     public void setUp(boolean press){
         up = press;
     }
-    
+
     public void setDown(boolean press){
         down = press;
     }
-    
+
     public int getx(){
         return px;
     }
-    
-    public int gety(){
+
+    public double gety(){
         return py;
     }
-    
+
     public void draw( Graphics page )
     {
-        page.setColor( Color.GREEN );
-        page.fillRect( px, py, 100, 100 );//change the last two numbers and see what happens
+        page.setColor( Color.BLACK );
+        page.fillOval( px, (int)py, 75, 75 );//change the last two numbers and see what happens
     }
 }

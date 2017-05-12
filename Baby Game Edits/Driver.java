@@ -2,7 +2,7 @@ import javax.swing.*;
 import java.awt.*;
 public class Driver
 {
-    public static final int WIDTH = 1000;
+    public static final int WIDTH = 1700;
     public static final int HEIGHT = 800;
     
     public static void driver()
