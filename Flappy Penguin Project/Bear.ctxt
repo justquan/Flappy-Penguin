@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.params=pxLoc\ pyLoc
+comment0.target=Bear(int,\ int)
+comment1.params=playerX
+comment1.target=void\ move(int)
+comment2.params=
+comment2.target=void\ fall()
+comment3.params=
+comment3.target=int\ getX()
+comment4.params=
+comment4.target=double\ getY()
+comment5.params=page
+comment5.target=void\ draw(java.awt.Graphics)
+numComments=6
