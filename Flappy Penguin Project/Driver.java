@@ -1,7 +1,4 @@
-// Zee Chunawala, Justin Quan, Caroline Zepecki
-// Period 2
-// 6 June 2017
-
+// Justin Quan
 // Driver - This class is used to create the JFrame and calls necessary methods to run the game.
 
 import javax.swing.*;
