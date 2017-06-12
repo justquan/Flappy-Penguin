@@ -1,3 +1,6 @@
+// Coin - This class controls a coin object which counts for points if collected. They are present between the pipes
+//        and count for 1 point added to the score. This class controls the methods associated with a coin.
+
 import java.awt.*;//must be imported to use Graphics
 import java.awt.event.*;
 import java.awt.image.*;
@@ -12,9 +15,11 @@ public class Coin
     public static final int DIAM = 75;
     BufferedImage bCoin;
     private static Image coin;
-    private boolean shouldPaint;
     public boolean doesCount;
-
+    private boolean shouldPaint;
+    
+    // Pre: None
+    // Post: Renders a coin image
     public Coin()
     {
         try {
@@ -26,43 +31,51 @@ public class Coin
         coin = bCoin.getScaledInstance(DIAM, DIAM, 0);
     }
     
+    // Pre: x and y >= 0
+    // Post: Sets initial conditions of a coin
     public Coin(int x, int y)
     {
         xCoord = x;
         yCoord = y;
-        shouldPaint = true;
         doesCount = true;
+        shouldPaint = true;
     }
 
+    // Pre: None
+    // Post: Moves the coin to the left of the screen
     public void move()
     {
-        xCoord -= 2;
+        xCoord -= Game.GAME_SPEED;
     }
 
+    // Pre: page exists
+    // Post: Paints the coin image if it should
     public void draw( Graphics page )
     {
-        /*
-        page.setColor(Color.YELLOW);//color defined using rgb values (0-255 each)
-        page.fillOval(xCoord, yCoord, DIAM, DIAM);
-         *///in case the image load fails
         if (shouldPaint)
-            page.drawImage(coin, xCoord,yCoord, null);
+            page.drawImage(coin, xCoord, yCoord, null);
     }
     
+    // Pre: None
+    // Post: Returns the x coordinate of the coin object
     public int getX()
     {   return xCoord;  }
     
+    // Pre: None
+    // Post: Returns the y coordinate of the coin object
     public int getY()
     {   return yCoord;  }
     
+    // Pre: None
+    // Post: Changes private variables to reflect a non-appearing and worthless coin object
     public void remove()
     {
         doesCount = false;
         shouldPaint = false;
     }
     
+    // Pre: None
+    // Post: Returns if the coin counts for value
     public boolean counts()
-    {
-        return doesCount;
-    }
+    { return doesCount; }
 }
