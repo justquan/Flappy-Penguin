@@ -12,7 +12,7 @@ public class Bear
 {
     private int px;
     private double py;
-    public static final int WIDTH = 100;
+    public static final int WIDTH = 200;
     public static final int HEIGHT = 100;
     private boolean up = false;    
     private boolean down = false;
@@ -35,7 +35,7 @@ public class Bear
         catch (IOException e) {
             System.out.println("Loading bear image error");
         }
-        bear = bBear.getScaledInstance(200, 100, 0);
+        bear = bBear.getScaledInstance(WIDTH, HEIGHT, 0);
     }
     
     // Pre: playerX >= 0
@@ -46,7 +46,7 @@ public class Bear
             py = py - 3;
             velocity = 0;
         }
-        else if(py < 700) {
+        else if(py < Driver.HEIGHT - Bear.HEIGHT) {
             fall();
         }
     }
