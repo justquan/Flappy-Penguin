@@ -7,12 +7,13 @@ import java.net.URL;
 public class Sound
 {
     private AudioClip clip;
-    
+    private boolean isPlaying;
     // Pre: file is the name of a song file which is of valid sound format
     // Post: Audio file named file is stored as a sound
     public Sound(String file)
     {
         clip = Applet.newAudioClip(getClass().getResource(file));
+		isPlaying = false;
     }
     
     // Pre: None
@@ -20,6 +21,7 @@ public class Sound
     public void play()
     {
         clip.play();
+		isPlaying = true;
     }
     
     // Pre: None
@@ -27,6 +29,7 @@ public class Sound
     public void stop()
     {
         clip.stop();
+		isPlaying = false;
     }
     
     // Pre: None
@@ -34,5 +37,13 @@ public class Sound
     public void loop()
     {
         clip.loop();
+		isPlaying = true;
     }
+
+	//Pre: None
+	//Post: returns if clip is playing
+	public boolean isPlaying()
+	{
+		return isPlaying;
+	}
 }

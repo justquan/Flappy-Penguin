@@ -2,6 +2,11 @@
 //        It also contains and controls necessary methods attributed to the pipe object.
 
 import java.awt.*;//must be imported to use Graphics
+import java.awt.event.*;
+import java.awt.image.*;
+import java.io.*;
+import javax.imageio.*;
+import javax.swing.*;
 
 public class Pipe
 {
@@ -62,7 +67,7 @@ public class Pipe
         page.setColor(Color.WHITE);
         page.fillPolygon(top);
         page.fillPolygon(bottom);
-        myCoin.draw(page);//fix
+        myCoin.draw(page);
     }
 
     // Pre: None
